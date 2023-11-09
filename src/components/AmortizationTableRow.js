@@ -56,7 +56,7 @@ const displayAnnualTotal = (props, attribute) => {
     }
   });
   const amortizationSubArray = at(input.amortization, indexRange);
-  return cf(sumBy(amortizationSubArray, attribute), { code: 'USD' });
+  return cf(sumBy(amortizationSubArray, attribute), { code: 'INR' });
 };
 
 const displayDataCell = (content) => (
@@ -75,11 +75,11 @@ const AmortizationTableRow = (props) => (
   <Container>
     <Row>
       {displayDataCell(displayDateForPayment(props))}
-      {displayDataCell(cf(props.row.payment, { code: 'USD' }))}
-      {displayDataCell(cf(props.row.principalPaymentRounded, { code: 'USD' }))}
-      {displayDataCell(cf(props.row.interestPaymentRounded, { code: 'USD' }))}
-      {displayDataCell(cf(props.row.accInterestRounded, { code: 'USD' }))}
-      {displayDataCell(cf(props.row.principalBalanceRounded, { code: 'USD' }))}
+      {displayDataCell(cf(props.row.payment, { code: 'INR' }))}
+      {displayDataCell(cf(props.row.principalPaymentRounded, { code: 'INR' }))}
+      {displayDataCell(cf(props.row.interestPaymentRounded, { code: 'INR' }))}
+      {displayDataCell(cf(props.row.accInterestRounded, { code: 'INR' }))}
+      {displayDataCell(cf(props.row.principalBalanceRounded, { code: 'INR' }))}
     </Row>
     {shouldShowAnnualSummaryRow(props) &&
       <Row style={summaryRowStyle}>
@@ -87,8 +87,8 @@ const AmortizationTableRow = (props) => (
         {displaySummaryCell(displayAnnualTotal(props, 'payment'))}
         {displaySummaryCell(displayAnnualTotal(props, 'principalPaymentRounded'))}
         {displaySummaryCell(displayAnnualTotal(props, 'interestPaymentRounded'))}
-        {displaySummaryCell(cf(props.row.accInterestRounded, { code: 'USD' }))}
-        {displaySummaryCell(cf(props.row.principalBalanceRounded, { code: 'USD' }))}
+        {displaySummaryCell(cf(props.row.accInterestRounded, { code: 'INR' }))}
+        {displaySummaryCell(cf(props.row.principalBalanceRounded, { code: 'INR' }))}
       </Row>
     }
   </Container>

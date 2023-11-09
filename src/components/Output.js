@@ -75,7 +75,7 @@ class Output extends React.Component {
                 Total Loan Cost:
               </span>
               <span className="summary-value">
-                {currencyFormatter.format(this.calculateTotalCost(), { code: 'USD' })}
+                {currencyFormatter.format(this.calculateTotalCost(), { code: 'INR' })}
               </span>
             </Row>
             <Row className="summary-row">
@@ -83,7 +83,7 @@ class Output extends React.Component {
                 Monthly Payment:
               </span>
               <span className="summary-value">
-                {currencyFormatter.format(this.calculateMonthlyPayment(), { code: 'USD' })}
+                {currencyFormatter.format(this.calculateMonthlyPayment(), { code: 'INR' })}
               </span>
             </Row>
             <Row className="summary-row">

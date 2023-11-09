@@ -19,7 +19,7 @@ class InputForm extends React.Component {
             <Control.input
               model="input.loanAmount"
               component={TextField}
-              floatingLabelText="Loan Amount ($)"
+              floatingLabelText="Loan Amount (₹)"
               type="number"
             />
             <Control.input
